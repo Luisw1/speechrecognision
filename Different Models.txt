@@ -1,0 +1,243 @@
+       
+        #creating model
+        create_model()
+        
+        def create_model_1():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape)
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(3, 3), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_2():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape)
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.1)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_3():
+            
+            #Create a deep neural network
+            print(f"creatin´´a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape)
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(2, 2), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_4():
+            
+            #Create a deep neural network
+            print(f"creatin´´a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape)
+            m = tf.keras.layers.Conv2D(filters=128, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_5():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape) 
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_6():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape) 
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_7():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape) 
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            m = tf.keras.layers.Dense(16, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_8():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape) 
+            m = tf.keras.layers.Conv2D(filters=256, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(512, activation='relu')(m)
+            m = tf.keras.layers.Dense(512, activation='relu')(m)
+            m = tf.keras.layers.Dense(512, activation='relu')(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(256, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(128, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            m = tf.keras.layers.Dense(16, activation='relu')(m)
+            m = tf.keras.layers.Dense(16, activation='relu')(m)
+            m = tf.keras.layers.Dense(16, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+        
+        def create_model_9():
+            
+            #Create a deep neural network
+            print(f"creating a deep neutral network with {self.epoch} epochs")
+            ip = tf.keras.Input(shape=self.train_X_ex[0].shape)
+            m = tf.keras.layers.Conv2D(filters=128, kernel_size=(4, 4), activation='relu')(ip)
+            m = tf.keras.layers.MaxPooling2D(pool_size=(4, 4))(m)
+            m = tf.keras.layers.BatchNormalization()(m)
+            m = tf.keras.layers.Dropout(0.2)(m)
+            m = tf.keras.layers.Flatten()(m)
+            m = tf.keras.layers.Dense(64, activation='relu')(m)
+            m = tf.keras.layers.Dense(32, activation='relu')(m)
+            op = tf.keras.layers.Dense(10, activation='softmax')(m)
+            self.model = tf.keras.Model(inputs=ip, outputs=op)
+            
+            self.model.summary()
+                
+            #Compile and fit the neural network
+            self.model.compile(loss='categorical_crossentropy',
+                      optimizer='adam',
+                      metrics=['accuracy'])
+            return self.model
+
+        #creating model
+        create_model_9()
+        
